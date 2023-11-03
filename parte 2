@@ -13,10 +13,26 @@ df= pd.DataFrame(data)
 df_dead = df[df['is_dead'] == 1]
 df_alive = df[df['is_dead'] == 0]
 
+avg_age_dead = df_dead['age'].mean()
+avg_age_alive = df_alive['age'].mean()
+
+# Imprimir los promedios de edades
+print(f"Promedio de edades de las personas fallecidas: {avg_age_dead}")
+print(f"Promedio de edades de las personas vivas: {avg_age_alive}")
+
 # Calcular los promedios de las edades
 avg_age_dead = df_dead['age'].mean()
 avg_age_alive = df_alive['age'].mean()
 
-#imprimir los resultados
-print(f"Promedio de edades de las personas fallecidas: {avg_age_dead}")
-print(f"Promedio de edades de las personas vivas: {avg_age_alive}")
+#parte 3
+
+# Verificar los tipos de datos en cada columna
+print("Tipos de datos en cada columna:")
+print(df.dtypes)
+
+# Calcular la cantidad de hombres fumadores y mujeres fumadoras
+smokers_by_gender = df.groupby(['is_male', 'is_smoker']).size()
+
+# Imprimir la cantidad de hombres fumadores y mujeres fumadoras
+print("Cantidad de hombres y mujeres fumadoras:")
+print(smokers_by_gender)
