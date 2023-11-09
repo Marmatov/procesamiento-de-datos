@@ -36,3 +36,4 @@ axs[3].set_title('Muerte')
 
 # Mostrar la gráfica
 plt.show()
+#complete
