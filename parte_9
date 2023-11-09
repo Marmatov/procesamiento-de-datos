@@ -35,7 +35,7 @@ fig = px.scatter_3d(
     y=X_embedded[:, 1],
     z=X_embedded[:, 2],
     color=y1,
-    color_continuous_scale='inferno',
+    color_continuous_scale='viridis',
     opacity=0.8,
 )
 
