@@ -27,13 +27,15 @@ X_embedded = TSNE(
 
 
 
+y1 =df["DEATH_EVENT"].replace({1: "Fallecido", 0: "vivo"})
+print(y1)
+
 fig = px.scatter_3d(
     x=X_embedded[:, 0],
     y=X_embedded[:, 1],
     z=X_embedded[:, 2],
-    color=y,
-    color_discrete_map={0: 'Vivo', 1: 'Fallecido'},
-    color_continuous_scale='agsunset',
+    color=y1,
+    color_continuous_scale='inferno',
     opacity=0.8,
 )
 
