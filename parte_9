@@ -32,8 +32,8 @@ fig = px.scatter_3d(
     y=X_embedded[:, 1],
     z=X_embedded[:, 2],
     color=y,
-    color_discrete_map={0: "Vivo", 1: "Fallecido"},
-    color_continuous_scale="Viridis",
+    color_discrete_map={0: 'Vivo', 1: 'Fallecido'},
+    color_continuous_scale='agsunset',
     opacity=0.8,
 )
 
