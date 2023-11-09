@@ -43,3 +43,6 @@ if __name__ == '__main__':
     parser.add_argument('url', type=str, help='URL desde donde se descargan los datos')
     args = parser.parse_args()
     main(args.url)
+
+    #python procesar_datos.py <URL>
+    # url: https://huggingface.co/datasets/mstz/heart_failure/raw/main/heart_failure_clinical_records_dataset.csv
