@@ -26,7 +26,7 @@ def procesar_data_frame(df):
     df['categoria_edad'] = pd.cut(df['age'], bins=[0, 12, 19, 39, 59, float('inf')],
     labels=['Niño', 'Adolescente', 'Jóvenes adulto', 'Adulto', 'Adulto mayor'])
 
-    df.to_csv('datos_procesados.csv', index=False)
+    df.to_csv('datos_procesados2.csv', index=False)
     print("Se guardó el DataFrame procesado como datos_procesados.csv")
 
 def main(url):
@@ -46,5 +46,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     main(args.url)
 
-    #python script.py <URL>
+    #python procesar_datos.py <URL>
     # url: https://huggingface.co/datasets/mstz/heart_failure/raw/main/heart_failure_clinical_records_dataset.csv
+    #python procesar_datos.py https://huggingface.co/datasets/mstz/heart_failure/raw/main/heart_failure_clinical_records_dataset.csv
